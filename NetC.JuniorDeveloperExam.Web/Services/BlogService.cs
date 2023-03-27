@@ -138,7 +138,7 @@ namespace NetC.JuniorDeveloperExam.Web.Services
             if (comment.Id == null || comment.Id == Guid.Empty)
                 comment.Id = Guid.NewGuid();
             
-            if (comment.ParentCommentId != null || comment.ParentCommentId != Guid.Empty)
+            if (parentId != null && (comment.ParentCommentId == null || comment.ParentCommentId == Guid.Empty))
                 comment.ParentCommentId = parentId;
             
                 
